@@ -8,7 +8,7 @@ namespace cs
     class Program
     {
         enum Direction{
-            up,
+            up, 
             down,
             forward,
         }
@@ -17,7 +17,6 @@ namespace cs
         {
             //prep
             List<string> inputLines = File.ReadAllLines("../input").ToList();
-            //List<commands>
 
             int horizontal = 0;
             int depth = 0;
@@ -44,7 +43,6 @@ namespace cs
         static (Direction direction, int value) parseCommand(string cmd){
             var parts = cmd.Split(" ");
             return ( ParseEnum<Direction>(parts[0]), int.Parse(parts[1]));
-        
         }
 
 
